@@ -1,0 +1,8 @@
+{
+  "name": "gov-review",
+  "version": "0.1.0",
+  "description": "제출 전 모의심사 및 자가채점 워크플로우",
+  "author": { "name": "강양희" },
+  "keywords": ["모의심사", "레드팀", "자가채점", "심사위원"],
+  "license": "MIT"
+}
