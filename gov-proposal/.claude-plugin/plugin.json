@@ -1,0 +1,8 @@
+{
+  "name": "gov-proposal",
+  "version": "0.1.0",
+  "description": "지원사업 사업계획서 및 위탁운영 제안서 작성 워크플로우",
+  "author": { "name": "강양희" },
+  "keywords": ["정부지원사업", "사업계획서", "PSST", "민간위탁", "진로체험", "에듀테크"],
+  "license": "MIT"
+}
