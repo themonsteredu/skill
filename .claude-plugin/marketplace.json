@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "gov-skills",
+  "version": "0.1.0",
+  "description": "한국 정부·지자체 지원사업 및 학교 민간위탁 제안서 작성 워크플로우.",
+  "owner": {
+    "name": "강양희",
+    "url": "https://moakit.ai"
+  },
+  "plugins": [
+    {
+      "name": "gov-proposal",
+      "description": "지원사업 사업계획서 및 위탁운영 제안서 작성: 신청주체 판별, PSST 구조, 위탁운영 구조, 배점표 역산, 실적근거 인용.",
+      "source": "./gov-proposal",
+      "category": "business"
+    },
+    {
+      "name": "gov-review",
+      "description": "제출 전 모의심사: 심사위원 시점 레드팀, 배점표 기준 자가채점, 탈락 사유 예측.",
+      "source": "./gov-review",
+      "category": "business"
+    }
+  ]
+}
