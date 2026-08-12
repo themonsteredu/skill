@@ -16,12 +16,28 @@
 
 ## 설치
 
+**마켓플레이스 추가와 플러그인 설치는 별개의 두 단계다.**
+마켓플레이스는 카탈로그 등록일 뿐이라, 추가만 하면 설치된 것은 없고 `/`를 쳐도 아무것도 뜨지 않는다.
+
+### Claude Desktop (Code 탭)
+
+1. 프롬프트 입력창 옆 **`+`** → **Plugins** → **Add plugin**
+2. **Add marketplace from GitHub** → `themonsteredu/skill`
+3. 목록에서 `gov-proposal` 설치
+4. `gov-review`도 설치 — **두 개를 각각** 설치해야 한다
+
+설치 후 `Run /reload-plugins to activate`가 뜨면 그것까지 실행하거나 세션을 새로 연다.
+
+> 윈도우는 [Git for Windows](https://git-scm.com/downloads/win)가 먼저 설치돼 있어야 한다.
+> WSL 세션과 클라우드 세션에서는 플러그인이 동작하지 않는다. **Local 세션**에서 쓴다.
+
 ### Claude Cowork (비개발자 권장)
 
 1. 왼쪽 아래 **Customize**
 2. **Browse plugins** → **Personal** → **+**
 3. **Add marketplace from GitHub**
 4. `themonsteredu/skill` 입력
+5. 목록에서 `gov-proposal`, `gov-review`를 **각각 설치**
 
 ### Claude Code (CLI)
 
@@ -29,14 +45,26 @@
 claude plugin marketplace add themonsteredu/skill
 claude plugin install gov-proposal@gov-skills
 claude plugin install gov-review@gov-skills
+claude plugin list
 ```
+
+마지막 줄에서 두 플러그인이 `enabled`로 나오면 끝이다.
+
+### 이 저장소를 직접 열어서 쓸 때
+
+`.claude/settings.json`에 마켓플레이스와 플러그인이 선언돼 있어서, 이 저장소를 연 세션에서는
+자동으로 설치된다. 위 과정을 따로 할 필요가 없다.
 
 ## 쓰는 법
 
+플러그인 커맨드에는 **플러그인 이름이 앞에 붙는다.** `/gov-draft`로는 뜨지 않는다.
+
 ```
-/gov-draft [공고문 첨부]      공고 → 초안 한 사이클
-/gov-review [제안서 첨부]     제출 전 모의심사
+/gov-proposal:gov-draft [공고문 첨부]     공고 → 초안 한 사이클
+/gov-review:gov-review  [제안서 첨부]     제출 전 모의심사
 ```
+
+입력창에 `/gov-proposal` 또는 `/gov-review`까지 치면 자동완성에 나온다.
 
 스킬은 따로 부르지 않아도 관련 대화가 나오면 자동으로 읽힌다.
 

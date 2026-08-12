@@ -1,0 +1,14 @@
+{
+  "extraKnownMarketplaces": {
+    "gov-skills": {
+      "source": {
+        "source": "github",
+        "repo": "themonsteredu/skill"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "gov-proposal@gov-skills": true,
+    "gov-review@gov-skills": true
+  }
+}

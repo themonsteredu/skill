@@ -1,0 +1,6 @@
+.DS_Store
+*.hwp
+*.hwpx
+*.pdf
+gov-brain/past/*.md
+!gov-brain/past/README.md
